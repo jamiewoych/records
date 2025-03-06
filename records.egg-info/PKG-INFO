@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: records
+Version: 0.0.1
+Summary: A package for storing results from GBIF REST query
+Home-page: UNKNOWN
+Author: Jamie Woych
+Author-email: jw3943@columbia.edu
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3

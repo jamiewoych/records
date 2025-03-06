@@ -1,0 +1,3 @@
+[console_scripts]
+records = records.__main__:main
+
