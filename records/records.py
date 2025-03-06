@@ -15,8 +15,8 @@ class Records:
         self.year = year
 
         # will be used to store output results
-        self.df = []
-        self.json = []
+        self.df = None
+        self.json = None
 
     def get_single_batch(self, offset=0, limit=20):
         "returns JSON result for a small batch query"
@@ -41,7 +41,7 @@ class Records:
         while 1:
 
             # get JSON data for a batch 
-            jdata = get_single_batch(self.genusKey, self.year, offset, 300)
+            jdata = self.get_single_batch(offset, 300)
 
             # increment counter by 300 (the max limit)
             offset += 300
@@ -59,7 +59,8 @@ class Records:
             
         self.df = pd.json_normalize(self.json)
 
-        return self.json
-        return self.df
+        return self.json, self.df
+        
+    
 
 
